@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Station</title>
+    <strong>Grocery Station</strong>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function checkAndAddRow() {
+            let table = document.getElementById("itemTable");
+            let rows = table.rows;
+            let lastRow = rows[rows.length - 1];
+            let filled = true;
+            
+            for (let i = 0; i < lastRow.cells.length; i++) {
+                if (lastRow.cells[i].textContent.trim() === "") {
+                    filled = false;
+                    break;
+                }
+            }
+            
+            if (filled) {
+                let newRow = table.insertRow();
+                for (let i = 0; i < 3; i++) {
+                    let newCell = newRow.insertCell(i);
+                    newCell.contentEditable = "true";
+                }
+            }
+        }
+    </script>
+</head>
+<body bgcolor="Green" background="https://www.buxtonco.com/images/blog/_og_image/marketing-to-attract-grocery-stores.jpg">
+    <p align="center"><font color="red" face="Berlin Sans FB Demi" size="3.5"><u>Welcome to the best destination of saving money and time for your groceries</u></font></p>
+    <table id="itemTable" xx="checkAndAddRow()">
+        <tr>
+            <th>&lt;Enter the Item&gt;</th>
+            <th>&lt;Price&gt;</th>
+            <th>&lt;Best Shop&gt;</th>
+        </tr>
+        <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+    </table>
+</body>
+</html>
