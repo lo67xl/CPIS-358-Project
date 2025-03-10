@@ -1,0 +1,72 @@
+/* Overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.buxtonco.com/images/blog/_og_image/marketing-to-attract-grocery-stores.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title Section */
+.title-container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #ff6f61;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Button Section */
+.button-container {
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Styling for the section below the title */
+.section {
+    margin-top: 40px;
+}
+
+/* Styling for paragraphs */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    width: 70%;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Centering the content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}

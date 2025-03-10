@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="C:\Downloads\Project\List.css">
+</head>
+  
+<body>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <h2>Your Grocery List</h2>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+        <table id="groceryTable">
+            <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td contenteditable="true" oninput="checkAndAddRow()"></td>
+                <td contenteditable="true" oninput="checkAndAddRow()"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Button Section -->
+    <div class="button-container">
+        <button onclick="location.href='home.html'">Back to Home</button>
+        <button onclick="location.href='shops.html'">View Shops</button>
+    </div>
+
+    <!-- Script to Add Rows Automatically -->
+    <script>
+        function checkAndAddRow() {
+            let table = document.getElementById("groceryTable");
+            let rows = table.getElementsByTagName("tr");
+            
+            // Stop adding rows after 3 rows
+            if (rows.length >= 4) {
+                return;
+            }
+
+            let lastRow = rows[rows.length - 1];
+            let cells = lastRow.getElementsByTagName("td");
+
+            let filled = true;
+            for (let i = 0; i < cells.length; i++) {
+                if (cells[i].textContent.trim() === "") {
+                    filled = false;
+                    break;
+                }
+            }
+
+            if (filled) {
+                let newRow = table.insertRow();
+                for (let i = 0; i < 2; i++) {
+                    let newCell = newRow.insertCell(i);
+                    newCell.contentEditable = "true";
+                    newCell.oninput = checkAndAddRow;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

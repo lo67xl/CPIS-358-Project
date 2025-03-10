@@ -1,0 +1,77 @@
+body {
+    url('https://www.buxtonco.com/images/blog/_og_image/marketing-to-attract-grocery-stores.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+/* Title Styling - Separate Color */
+.title-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title-container h2 {
+    margin: 0;
+    padding: 15px 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: black; /* Custom title color (Orange) */
+}
+
+/* Table Styling - Unchanged Colors */
+.table-container {
+    margin-top: 50px; /* Space between title and table */
+    padding: 20px;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto; /* Centers the table */
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: cyan; /* Yellow header */
+    color: black;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternate rows */
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
